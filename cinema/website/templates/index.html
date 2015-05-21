@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Movies and Projections: </h1>
+{% for movie in movies %}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{ movie.name }}
+    </div>
+    <div class="panel-body">
+        <p> Rating of the movie: {{ movie.rating }}</p>
+        <strong>Projections:</strong>
+        {{projections}}
+    </div>
+</div>
+{% endfor %}
+</ul>
+{% endblock %}

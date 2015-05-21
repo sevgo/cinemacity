@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <title>CINEMA</title>
+</head>
+    <body>
+
+    <div class="well well-lg">
+    <!-- navigation menu -->
+    <ul class="nav nav-pills nav-justified">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="/movies">Movies</a></li>
+        <li role="presentation"><a href="/proj">Projections</a></li>
+        <li role="presentation"><a href="/reserv">Reservations</a></li>
+    </ul>
+    </div>
+    <br />
+    <!-- end of navigation -->
+    <div class="well well-lg">
+        {% block content %}
+        {% endblock %}
+    </div>
+    </body>
+</html>
