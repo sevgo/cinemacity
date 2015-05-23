@@ -9,7 +9,14 @@
     <div class="panel-body">
         <p> Rating of the movie: {{ movie.rating }}</p>
         <strong>Projections:</strong>
-        {{projections}}
+        <ul class="list-group">
+        {% for proj in movie.projection_set.all %}
+            <li class="list-group-item">
+            <a href="/show-projection/{{proj.id}}">
+                {{ proj.time|time:"G:i" }} in HALL #{{ proj.hall }}</a>
+            </li>
+        {% endfor %}
+        </ul>
     </div>
 </div>
 {% endfor %}
