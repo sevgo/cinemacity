@@ -8,6 +8,7 @@ def index(request):
     projections = [Projection.objects.filter(movie_id=y.id) for y in movies]
     return render(request, "index.html", locals())
 
+
 def movies(request):
     movies = Movie.objects.all()
     return render(request, "movies.html", locals())
